@@ -1,0 +1,218 @@
+/* Background Gradient */
+body {
+    background: linear-gradient(45deg, #3399ff, #006afe);
+    padding-top: 30px; /* Offset for the fixed navbar */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: linear-gradient(45deg, #3399ff, #006afe);
+    position: relative;
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Futura'; /* Futura font */
+    font-size: 24px;
+	color: white;   
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+	color: white;   
+}
+
+.navbar-toggler {
+    border-color: white;
+}
+
+.navbar-nav .btn-primary {
+    font-family: 'Futura', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border: 1px solid #006afe;
+    padding: 10px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .btn-primary:hover {
+    background-color: white; 
+}
+
+.no-cursor-container {
+    user-select: none; /* Prevents text selection for all child elements */
+    cursor: default; /* Ensures the normal cursor (not text selection) */
+}
+
+.contract-address-title-text {
+    font-family: 'Futura', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    word-wrap: break-word; /* Ensures text wraps within the container */
+    word-break: break-word; /* Breaks words if necessary */
+}
+
+.contract-address-text {
+    font-family: 'Futura', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    word-wrap: break-word; /* Ensures text wraps within the container */
+    word-break: break-word; /* Breaks words if necessary */
+    user-select: text;
+    cursor: default; /* Ensures the normal cursor (not text selection) */
+}
+
+.section-title-text {
+    font-family: 'Futura', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.small-text {
+    font-family: 'Futura', sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    color: white;
+}
+
+.section-subtitle-text {
+    font-family: 'Futura', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+.section-detail-text {
+	text-align: left;
+    font-family: 'Futura', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}	
+
+/* Hero Section */
+.content-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+}
+
+.hero-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure the text in the hero section does not extend too far on large screens */
+.container {
+    max-width: 1200px; /* Sets a max width to prevent stretching on large screens */
+}
+
+/* Mobile responsiveness: Make sure the layout stacks correctly on small screens */
+@media (max-width: 767px) {
+    .content-section {
+        text-align: center;
+    }
+}
+
+/* General button styling */
+.btn-icon {
+    display: inline-block;
+    background-color: white; /* Match the Buy button's background color */
+    border-radius: 10px;
+    padding: 10px; /* Add some padding around the image */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Icon inside the button */
+.icon {
+    width: 30px; /* Adjust size of the icons */
+    height: auto;
+}
+
+/* Hover effect */
+.btn-icon:hover {
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6); /* Enhance shadow on hover */
+}
+
+/* Gap between buttons */
+.gap-3 > * {
+    margin-right: 5px;
+}
+
+/* Remove margin from the last button */
+.gap-3 > *:last-child {
+    margin-right: 0;
+}
+
+.marquee-container {
+  background-color: #3399ff;
+  padding: 0; /* Adjust padding as needed */
+  border-top: 2px solid black; /* Black border on top */
+  border-bottom: 2px solid black; /* Black border on bottom */
+  overflow: hidden; /* Hide any overflow */
+  white-space: nowrap; /* Prevent text from wrapping */
+  display: flex;
+  align-items: center;
+}
+
+.marquee {
+  display: flex; /* Use flexbox to align items horizontally */
+  animation: marquee 20s linear infinite; /* Adjust duration as necessary */
+}
+
+.marquee-content {
+  display: inline-block; /* Ensure each span is inline-block for correct spacing */
+  padding-right: 0.5em; /* Adjust spacing between items */
+  white-space: nowrap; /* Prevent text from wrapping */
+  font-size: 16pt;
+  color: white;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-30%); }
+}
+
+.buy-token-guide .guide-step {
+  width: 50%; /* Default to 50% width on larger screens */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Centers the box horizontally */
+  background: #3399ff;
+}
+
+.buy-token-guide .arrow-box {
+  width: 50%; /* Arrow box width matches the guide box */
+  text-align: center;
+  margin: 0 auto 10px auto;
+}
+
+.buy-token-guide .arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid white;
+  margin: 0 auto;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .buy-token-guide .guide-step {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .buy-token-guide .arrow-box {
+    width: 100%; /* Make sure arrows take full width too */
+  }
+}
+Similar snippets
